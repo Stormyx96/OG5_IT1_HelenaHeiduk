@@ -1,18 +1,30 @@
 package de.futurehome.tanksimulator;
+
 public class Tank {
-	
-	private double fuellstand;
 
-	public Tank(double fuellstand) {
-		this.fuellstand = fuellstand;
-	}
+    private double fuellstand;
+    private double maxFuellstand;
 
-	public double getFuellstand() {
-		return fuellstand;
-	}
+    public Tank(double maxFuellstand) {
+        this.maxFuellstand = maxFuellstand;
+        this.fuellstand = 0;
+    }
 
-	public void setFuellstand(double fuellstand) {
-		this.fuellstand = fuellstand;
-	}
+    public double getFuellstand() {
+        return fuellstand;
+    }
 
+    public void setFuellstand(double fuellstand) {
+        this.fuellstand = fuellstand;
+    }
+
+    public double getMaxFuellstand() {
+        return maxFuellstand;
+    }
+
+    public void setMaxFuellstand(double maxFuellstand) {
+        this.maxFuellstand = maxFuellstand;
+    }
 }
+
+

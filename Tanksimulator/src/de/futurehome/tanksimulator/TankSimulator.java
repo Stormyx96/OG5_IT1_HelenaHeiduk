@@ -31,7 +31,7 @@ public class TankSimulator extends Frame {
 	public TankSimulator() {
 		super("Tank-Simulator");
 		
-		myTank = new Tank(0);
+		myTank = new Tank(200);
 		
 		this.lblUeberschrift.setFont(new Font("", Font.BOLD, 16));
 		this.pnlNorth.add(this.lblUeberschrift);
@@ -52,6 +52,8 @@ public class TankSimulator extends Frame {
 		this.btnBeenden.addActionListener(myActionListener);
 		this.btnZuruecksetzen.addActionListener(myActionListener);
 	}
+	
+
 
 	public static void main(String argv[]) {
 		new TankSimulator();
