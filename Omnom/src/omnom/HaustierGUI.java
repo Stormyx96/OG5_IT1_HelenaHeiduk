@@ -28,7 +28,7 @@ public class HaustierGUI extends JFrame {
 	private JProgressBar pgbGesundheit;
 
 	/**
-	 * Launch the application.
+	 * Launch the application.HaustierGUI.java
 	 */
 	public static void main(String[] args) {
 		Haustier omNom = new Haustier("Om Nom");
