@@ -16,7 +16,7 @@ public class GameControl {
 
 	private int score = 0;
 
-	private ArrayList<Planet> listPlaneten = new ArrayList<Planet>();
+	private ArrayList<Himmelskoerper> listHimmelskoerper = new ArrayList<Himmelskoerper>();
 	private ArrayList<Ladung> listLadungen = new ArrayList<Ladung>();
 
 	private Universum universum;
@@ -82,17 +82,31 @@ public class GameControl {
 	}
 
 	public void addPlanet(Planet meinPlanet) {
-		if (!listPlaneten.contains(meinPlanet)) {
-			listPlaneten.add(meinPlanet);
+		if (!listHimmelskoerper.contains(meinPlanet)) {
+			listHimmelskoerper.add(meinPlanet);
 		}
 	}
 
 	public void removePlanet(Planet meinPlanet) {
-		if (listPlaneten.contains(meinPlanet)) {
-			listPlaneten.remove(meinPlanet);
+		if (listHimmelskoerper.contains(meinPlanet)) {
+			listHimmelskoerper.remove(meinPlanet);
 		}
 	}
 
+	
+	public void addMond(Mond meinMond) {
+		if (!listHimmelskoerper.contains(meinMond)) {
+			listHimmelskoerper.add(meinMond);
+		}
+	}
+
+	public void removeMond(Mond meinMond) {
+		if (listHimmelskoerper.contains(meinMond)) {
+			listHimmelskoerper.remove(meinMond);
+		}
+	}
+	
+	
 	private void drawFrame() {
 		for (int y = 0; y < screenHeight; y++) {
 			if (y == 0 || y == screenHeight - 3 || y == screenHeight - 1) {
@@ -185,9 +199,9 @@ public class GameControl {
 	 * <= y && y <= raumschiff.getPosY() + 10); }
 	 */
 
-	private void drawPlanet(Planet planet) {
-		int centerX = (int) planet.getPosX();
-		int centerY = (int) planet.getPosY();
+	private void drawHimmelskoerper(Himmelskoerper himmelskoerper) {
+		int centerX = (int) himmelskoerper.getPosX();
+		int centerY = (int) himmelskoerper.getPosY();
 		Position transformedPos = transformPos(new Position(centerX, centerY));
 		char[][] planetShape = Planet.getDarstellung();
 		drawShape(planetShape, PLANET_COLOR, transformedPos);
@@ -207,8 +221,8 @@ public class GameControl {
 		drawFrame();
 		drawStars();
 		// Male alle Planeten
-		for (Planet planet : listPlaneten) {
-			drawPlanet(planet);
+		for (Himmelskoerper himmelskoerper : listHimmelskoerper) {
+			drawHimmelskoerper(himmelskoerper);
 		}
 		// Male alle Ladungen
 		for (Ladung ladung : listLadungen) {
@@ -261,4 +275,6 @@ public class GameControl {
 
 	}
 
+
+	
 }
