@@ -6,16 +6,14 @@ package de.oszimt.starsim2099;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Ladung {
+public class Ladung extends Standort{
 
 	// Attribute
 private String typ;
 private int masse;
-private double posX;
-private double posY;
 
 	// Methoden
-public Ladung (String typ, int masse, double posX, double posY) {
+public Ladung () {
 
 	
 }
@@ -41,22 +39,11 @@ public void setMasse(int neuMasse) {
 	this.masse = neuMasse;
 }
 
-public double getPosX() {
-	return this.PosX;
-}
-public void setPosX(double neuPosX) {
-	this.posX = neuPosX;
-}
 
-public double getPosY() {
-	return this.PosY;
-}
-public void setPosY(double neuPosY) {
-	this.posY = neuPosY;
 }
 
 
 
 
-}
+
 

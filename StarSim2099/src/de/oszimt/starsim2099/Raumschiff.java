@@ -6,18 +6,18 @@ package de.oszimt.starsim2099;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Raumschiff {
+public class Raumschiff extends Standort{
 
 	// Attribute
 	private int maxKapazitaet;
 	private String typ;
 	private String antrieb;
 	private int winkel;
-	private double posX;
-	private double posY;
+	
+	
 	
 	// Methoden
-public Raumschiff(int maxKapazitaet, String typ, String antrieb, int winkel, double posX, double posY) {
+public Raumschiff() {
 }	
 
 // Darstellung
@@ -32,11 +32,11 @@ public Raumschiff(int maxKapazitaet, String typ, String antrieb, int winkel, dou
 		return raumschiffShape;
 	}
 
-	public int getMaxLadeKapazitaet() {
-		return this.maxLadeKapazitaet;
+	public int getMaxLadekapazitaet() {
+		return this.getMaxLadekapazitaet();
 	}
-	public void setMaxLadeKapazitaet(int neuMaxLadeKapazitaet) {
-		this.maxLadeKapazitaetn = neuMaxLadeKapazitaet;
+	public void setMaxLadekapazitaet(int neuMaxLadekapazitaet) {
+		this.maxKapazitaet = neuMaxLadekapazitaet;
 	}
 
 		
@@ -57,26 +57,13 @@ public Raumschiff(int maxKapazitaet, String typ, String antrieb, int winkel, dou
 
 
 	public int getWinkel() {
-		return this.Winkel;
+		return this.winkel;
 	}
 	public void setWinkel(int neuWinkel) {
 		this.winkel = neuWinkel;
 	
 	
-	}
-	public double getPosX() {
-		return this.PosX;
-	}
-	public void setPosX(double neuPosX) {
-		this.posX = neuPosX;
-	}
 
-
-	public double getPosY() {
-		return this.PosY;
-	}
-	public void setPosY(double neuPosY) {
-		this.posY = neuPosY;
 	}
 	
 	
