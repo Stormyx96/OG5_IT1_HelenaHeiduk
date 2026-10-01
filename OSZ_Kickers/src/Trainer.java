@@ -2,13 +2,13 @@
 public class Trainer extends Mitglied{
 
 	private char lizenzklasse;
-	private int monatAufwandsentschädigung;
+	private int monatAufwandsentschaedigung;
 	
 	
-public Trainer(String name, int telefonnummer, int jahresbeitrag, char lizenzklasse, int monatAufwandsentschädigung) {
+public Trainer(String name, int telefonnummer, int jahresbeitrag, char lizenzklasse, int monatAufwandsentschaedigung) {
 	super(name, telefonnummer, jahresbeitrag);
 	this.lizenzklasse = lizenzklasse;
-	this.monatAufwandsentschädigung = monatAufwandsentschädigung;
+	this.monatAufwandsentschaedigung = monatAufwandsentschaedigung;
 	}
 	
 
@@ -21,10 +21,10 @@ public Trainer(String name, int telefonnummer, int jahresbeitrag, char lizenzkla
 	
 	
 	public int getMonatAufwandsentschädigung() {
-		return monatAufwandsentschädigung;
+		return monatAufwandsentschaedigung;
 	}
 	public void setMonatAufwandsentschädigung(int monatAufwandsentschädigung) {
-		this.monatAufwandsentschädigung = monatAufwandsentschädigung;
+		this.monatAufwandsentschaedigung = monatAufwandsentschädigung;
 	}
 	
 }
