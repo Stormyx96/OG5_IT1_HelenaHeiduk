@@ -21,7 +21,7 @@ public class Stoppuhr {
         if (isRunning) {
             throw new IllegalStateException("Die Stoppuhr läuft noch. Bitte stoppen Sie sie zuerst.");
         }
-        return (endTime - startTime) / 1_000_000_000.0; // Direkte Umrechnung in Sekunden
+        return (endTime - startTime) / 1_000_000_000.0; 
     }
 }
 
